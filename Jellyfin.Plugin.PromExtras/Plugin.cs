@@ -28,7 +28,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     }
 
     /// <inheritdoc />
-    public override string Name => "Template";
+    public override string Name => "PromExtras";
 
     /// <inheritdoc />
     public override Guid Id => Guid.Parse("6153E71F-70D7-4A1B-8220-7CDB0F336DC5");
