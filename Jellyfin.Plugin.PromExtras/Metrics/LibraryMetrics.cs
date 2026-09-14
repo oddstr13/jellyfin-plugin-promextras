@@ -61,7 +61,11 @@ public class LibraryMetrics : IHostedService
     {
         foreach (var kind in Enum.GetValues<BaseItemKind>())
         {
-            _itemCount.WithLabels(kind.ToString()).Set(GetCount(kind));
+            var value = GetCount(kind);
+            if (value != 0)
+            {
+                _itemCount.WithLabels(kind.ToString()).Set(value);
+            }
         }
     }
 
